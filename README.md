@@ -27,3 +27,7 @@ npm run dev
 ```sh
 npm run build
 ```
+
+PowerAppLayout Components are for the two different form factors. Would be underneath or beside new color schemes.
+
+
