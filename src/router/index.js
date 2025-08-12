@@ -1,10 +1,16 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-// Import all of the components that I need to route below
+import HomeView from '@/views/HomeView.vue';
+import {createRouter, createWebHistory} from 'vue-router';
 
-//TODO: totally reconfigure since this is for Vue2. Need to do it for Vue3.
-Vue.use(Router);
+const router = createRouter({
+    history: createWebHistory(import.meta.env.BASE_URL),
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: HomeView
+        }
+    ]
+});
 
-// Fill the routes with {path: "/route", name: "routename", component: "componentName"}
-const routes = []
+export default router;
 

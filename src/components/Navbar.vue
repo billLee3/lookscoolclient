@@ -3,5 +3,5 @@
 </script>
 
 <template>
-    <div>Ui Schema Card</div>
+    <h1>NavBar Component</h1>
 </template>
