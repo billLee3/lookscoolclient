@@ -3,5 +3,5 @@
 </script>
 
 <template>
-    <h1>User Register Component</h1>
+    <h1>User Profile Component</h1>
 </template>
