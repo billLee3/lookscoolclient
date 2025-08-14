@@ -17,6 +17,7 @@ import { RouterLink } from 'vue-router';
                     <li class="nav-item mx-3">
                         <RouterLink to="/register" class="navlink">Register user</RouterLink>
                     </li>
+                    
                     <li class="nav-item mx-3">
                         <RouterLink to="/login" class="navlink">Login user</RouterLink>
                     </li>

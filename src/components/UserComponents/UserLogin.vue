@@ -15,20 +15,24 @@
     const toast = useToast()
 
     const handleSubmit = async () => {
-        const newLogin = {
-            grant_type: form.grant_type,
-            username: form.username,
-            password: form.password,
-            scope: form.scope,
-            client_id: form.client_id,
-            client_secret: form.client_secret
-        }
+        // const newLogin = {
+        //     //grant_type: form.grant_type,
+        //     username: form.username,
+        //     password: form.password,
+        //     //scope: form.scope,
+        //     //client_id: form.client_id,
+        //     //client_secret: form.client_secret
+        // }
+
+        const formData = new FormData();
+        formData.append('username', form.username)
+        formData.append('password', form.password)
 
         try{
-            const request = await axios.post('http://0.0.0.0:8000/auth/token', newLogin);
+            const request = await axios.post('http://0.0.0.0:8000/auth/token', formData);
             toast.success("User successfully logged in")
         }catch(error){
-            toast.error("User was unable to sign in. ")
+            toast.error("User was unable to sign in. ", error)
         }
     }
 </script>
