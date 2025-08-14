@@ -1,11 +1,11 @@
 <script setup>
-import UISchemaList from '@/components/UISchemaComponents/UISchemaList.vue';
-import UISchemaCard from '@/components/UISchemaComponents/UISchemaCard.vue';
+import UserLogin from '@/components/UserComponents/UserLogin.vue';
+import UserRegister from '@/components/UserComponents/UserRegister.vue';
+
 
 </script>
 
 <template>
-    <div>HOME VIEW</div>
-    <UISchemaList />
-    <UISchemaCard />
+    <UserLogin/>
+    <UserRegister />
 </template>
