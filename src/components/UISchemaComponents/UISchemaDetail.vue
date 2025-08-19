@@ -1,7 +1,8 @@
 <script setup>
-
 </script>
 
 <template>
-    <h1>UI Schema Detail Component</h1>
+    <div class="container">
+        <h1>UI Schema Detail Component</h1>
+    </div>
 </template>

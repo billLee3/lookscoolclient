@@ -1,9 +1,10 @@
 <script setup>
-import UISchemaDetail from '@/components/UISchemaComponents/UISchemaDetail.vue';
+import CanvasAppModel from '@/components/PowerAppLayoutComponents/CanvasAppLayoutComponents/CanvasAppModel.vue';
 
 </script>
 
 <template>
     <div>UI Schema Detail</div>
-    <UiSchemaDetail/>
+    
+    <CanvasAppModel />
 </template>

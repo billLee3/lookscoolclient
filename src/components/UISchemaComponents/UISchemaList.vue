@@ -6,13 +6,9 @@ import axios from 'axios';
 
 const schemas = ref([]);
 
-
 onMounted(async () => {
     try{
-        await axios.get('http://0.0.0.0:8000/schema/', {
-            headers: {
-                Authoriztion: `Bearer ${jwtToken}`
-            }
+        await axios.get('http://0.0.0.0:5001/api/uischema/', {
         }).then(response => {
             schemas.value = response.data;
         });
@@ -25,11 +21,17 @@ onMounted(async () => {
 
 <template>
     <section class="container-lg p-3">
-        <div>UiSchemas</div>
-        <ul>
-            <li v-for="schema in schemas">
-                {{ schema }}
-            </li>
+        <ul v-for="schema in schemas">
+            <div class="card">
+                <div class="card-header">
+                    {{schema.name}}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Background Color Primary</h5>
+                    <p class="card-text">{{ schema.backgroundColorPrimary }}</p>
+                    <RouterLink to="/schemadetail" class="navlink">View Schema</RouterLink>
+                </div>
+            </div>
         </ul>
     </section>
     
