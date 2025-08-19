@@ -11,6 +11,8 @@
         client_id: '',
         client_secret: ''
     })
+
+    const token = '';
     
     const toast = useToast()
 
@@ -29,8 +31,11 @@
         formData.append('password', form.password)
 
         try{
-            const request = await axios.post('http://0.0.0.0:8000/auth/token', formData);
-            toast.success("User successfully logged in")
+            await axios.post('http://0.0.0.0:8000/auth/token', formData)
+            
+            .then(toast.success("User successfully logged in"))
+            
+
         }catch(error){
             toast.error("User was unable to sign in. ", error)
         }
