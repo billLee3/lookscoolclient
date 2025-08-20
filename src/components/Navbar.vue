@@ -1,11 +1,17 @@
 <script setup>
 import { RouterLink } from 'vue-router';
+import router from '@/router';
+
+
+const navigateToHome = () => {
+          router.push('/');
+        };
 </script>
 
 <template>
     <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
-        <div class="container-fluid">
-            <RouterLink to="/">PowerApps UI Schema</RouterLink>
+        <div class="container-fluid text-light">
+            <h1 @click="navigateToHome()">PowerApps UI Schema</h1>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>

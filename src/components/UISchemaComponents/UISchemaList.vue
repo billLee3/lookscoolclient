@@ -2,9 +2,13 @@
 import {ref, onMounted} from 'vue';
 import { RouterLink } from 'vue-router';
 import axios from 'axios';
-
+import router from '@/router';
 
 const schemas = ref([]);
+
+const navigateToDetail = () => {
+          router.push('/schemadetail');
+        };
 
 onMounted(async () => {
     try{
@@ -17,6 +21,8 @@ onMounted(async () => {
         console.error("Error fetching schemas", error);
     }
 })
+
+
 </script>
 
 <template>
@@ -29,7 +35,7 @@ onMounted(async () => {
                 <div class="card-body">
                     <h5 class="card-title">Background Color Primary</h5>
                     <p class="card-text">{{ schema.backgroundColorPrimary }}</p>
-                    <RouterLink to="/schemadetail" class="navlink">View Schema</RouterLink>
+                    <button @click="navigateToDetail()">View Schema</button>
                 </div>
             </div>
         </ul>
