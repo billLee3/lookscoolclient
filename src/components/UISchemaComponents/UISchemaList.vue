@@ -7,26 +7,26 @@ import UISchemaCard from './UISchemaCard.vue';
 
 
 // need to convert this to reactive because it will be taking in objects. 
-// const schemas = ref([]);
-const schemas = reactive([
-//     {
-//     Id: 0,
-//     Name: "",
-//     TextColorPrimary: "",
-//     TextColorSecondary: "",
-//     TextColorTertiary: "",
-//     setTextColorTertiaryLight: "",
-//     TextColorTertiaryDark: "",
-//     BackgroundColorPrimary: "",
-//     BackgroundColorSecondary: "",
-//     BackgroundColorTertiary: "",
-//     BackgroundColorTertiaryLight: "",
-//     BackgroundColorTertiaryDark: "",
-//     PrimaryFontFamily: "",
-//     SecondaryFontFamily: "",
-//     TertiaryFontFamily: ""
-// }
-])
+const schemas = ref([]);
+// const schemas = reactive([
+// //     {
+// //     Id: 0,
+// //     Name: "",
+// //     TextColorPrimary: "",
+// //     TextColorSecondary: "",
+// //     TextColorTertiary: "",
+// //     setTextColorTertiaryLight: "",
+// //     TextColorTertiaryDark: "",
+// //     BackgroundColorPrimary: "",
+// //     BackgroundColorSecondary: "",
+// //     BackgroundColorTertiary: "",
+// //     BackgroundColorTertiaryLight: "",
+// //     BackgroundColorTertiaryDark: "",
+// //     PrimaryFontFamily: "",
+// //     SecondaryFontFamily: "",
+// //     TertiaryFontFamily: ""
+// // }
+// ])
 
 const navigateToDetail = () => {
           router.push('/schemadetail');
@@ -49,8 +49,8 @@ onMounted(async () => {
 
 <template>
     <section class="container-lg p-3">
-        <ul v-for="schema in schemas">
-            <div class="card">
+        <!-- <ul v-for="schema in schemas"> -->
+            <!-- <div class="card">
                 <div class="card-header">
                     {{schema.name}}
                 </div>
@@ -59,8 +59,9 @@ onMounted(async () => {
                     <p class="card-text">{{ schema.backgroundColorPrimary }}</p>
                     <button @click="navigateToDetail()">View Schema</button>
                 </div>
-            </div>
-            <!-- <UISchemaCard v-bind:schema/> -->
+            </div> -->
+        <ul>
+            <UISchemaCard v-for="schema in schemas" :schema="schema"/>
         </ul>
     </section>
     
