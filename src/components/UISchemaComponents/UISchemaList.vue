@@ -3,6 +3,7 @@ import {ref, onMounted} from 'vue';
 import { RouterLink } from 'vue-router';
 import axios from 'axios';
 import router from '@/router';
+import UISchemaCard from './UISchemaCard.vue';
 
 const schemas = ref([]);
 
@@ -38,6 +39,7 @@ onMounted(async () => {
                     <button @click="navigateToDetail()">View Schema</button>
                 </div>
             </div>
+            <!-- <UISchemaCard v-bind:schema/> -->
         </ul>
     </section>
     

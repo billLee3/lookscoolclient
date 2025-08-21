@@ -1,16 +1,7 @@
 <script setup>
 import { defineProps } from 'vue';
 
-defineProps({
-    name: {
-        type: String,
-        default: "No name"
-    },
-    primaryColor: {
-        type: String,
-        default: "Black"
-    }
-})
+
 </script>
 
 <template>
