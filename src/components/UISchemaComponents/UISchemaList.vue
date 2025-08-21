@@ -60,9 +60,12 @@ onMounted(async () => {
                     <button @click="navigateToDetail()">View Schema</button>
                 </div>
             </div> -->
-        <ul>
-            <UISchemaCard v-for="schema in schemas" :schema="schema"/>
+        <ul v-if="schemas.length > 0">
+            <UISchemaCard v-for="(schema, index) in schemas" :schema="schema" :index="index"/>
         </ul>
+        <p class="uischema-msg" v-else>
+            <span>You have no schemas. Add one below. </span>
+        </p>
     </section>
     
 </template>

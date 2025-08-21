@@ -11,9 +11,10 @@ const router = createRouter({
             component: HomeView
         },
         {
-            path: '/schemadetail',
+            path: '/schemadetail/:id',
             name: 'schemadetail',
-            component: UiSchemaDetailView
+            component: UiSchemaDetailView, 
+            props: true
         }
     ]
 });
