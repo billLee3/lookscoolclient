@@ -5,7 +5,28 @@ import axios from 'axios';
 import router from '@/router';
 import UISchemaCard from './UISchemaCard.vue';
 
-const schemas = ref([]);
+
+// need to convert this to reactive because it will be taking in objects. 
+// const schemas = ref([]);
+const schemas = reactive([
+//     {
+//     Id: 0,
+//     Name: "",
+//     TextColorPrimary: "",
+//     TextColorSecondary: "",
+//     TextColorTertiary: "",
+//     setTextColorTertiaryLight: "",
+//     TextColorTertiaryDark: "",
+//     BackgroundColorPrimary: "",
+//     BackgroundColorSecondary: "",
+//     BackgroundColorTertiary: "",
+//     BackgroundColorTertiaryLight: "",
+//     BackgroundColorTertiaryDark: "",
+//     PrimaryFontFamily: "",
+//     SecondaryFontFamily: "",
+//     TertiaryFontFamily: ""
+// }
+])
 
 const navigateToDetail = () => {
           router.push('/schemadetail');
